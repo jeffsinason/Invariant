@@ -79,6 +79,43 @@ Invariant provides the architecture to enforce these rules.
 
 ---
 
+## Running the Suite
+
+Run the full local test suite:
+
+```bash
+make test
+```
+
+or:
+
+```bash
+bash scripts/test.sh
+```
+
+Run a mock benchmark matrix:
+
+```bash
+make benchmark-mock
+```
+
+Run the live provider matrix:
+
+```bash
+make live-matrix
+```
+
+The live matrix script will:
+- run core and extended cases against OpenAI when `OPENAI_API_KEY` is available
+- run core and extended cases against Anthropic when `ANTHROPIC_API_KEY` is available
+- save benchmark artifacts in [harness/results](/Users/jeffreysinason/Development/Invariant/harness/results)
+
+For setup and workflow details, see:
+- [live_testing_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/live_testing_workflow.md)
+- [benchmark_execution_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/benchmark_execution_workflow.md)
+
+---
+
 ## 📄 Whitepaper
 
 See /docs/whitepaper.md for full details.
