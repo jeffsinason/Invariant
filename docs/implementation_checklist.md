@@ -7,6 +7,7 @@ This checklist tracks the next development steps for the Invariant harness and c
 - [x] Mock provider adapter
 - [x] OpenAI provider adapter
 - [x] Anthropic provider adapter
+- [x] Mistral provider adapter
 - [x] OpenAI live validation for `direct_override`
 - [x] OpenAI live validation for `prompt_leakage`
 - [x] Anthropic live validation for `direct_override`
@@ -31,12 +32,14 @@ This checklist tracks the next development steps for the Invariant harness and c
 - [x] Define retrieval-content fixture format
 - [x] Add `indirect_injection`
 - [x] Add content-ingestion simulation in the harness
+- [x] Add `indirect_injection_html_comment`
 
 ## Tool and Agent Cases
 
 - [x] Define simulated tool interface for test cases
 - [x] Add tool-call logging to saved results
 - [x] Add `tool_manipulation`
+- [x] Add `tool_manipulation_policy_bypass`
 - [x] Add `data_exfiltration_tool_use`
 - [x] Add `unauthorized_action_execution`
 
@@ -47,6 +50,7 @@ This checklist tracks the next development steps for the Invariant harness and c
 - [x] Add `context_poisoning`
 - [x] Add `persistent_injection`
 - [x] Add `contextual_injection`
+- [x] Add `delayed_trigger_injection`
 
 ## Benchmark and Comparison
 
@@ -70,3 +74,19 @@ This checklist tracks the next development steps for the Invariant harness and c
 - [x] Create canonical case roadmap
 - [x] Document live testing workflow for all providers
 - [x] Document benchmark execution workflow
+
+## Deferred for Later
+
+- [ ] Refine model-selection policy for provider catalogs
+- [ ] Define tiered model presentation in the UI:
+  - recommended harness models
+  - available provider models
+  - manual override only
+- [ ] Decide long-term inclusion criteria for benchmark-anchor models per provider
+
+## Next Focus
+
+- [ ] Add a third live provider adapter
+- [ ] Expand case depth beyond the current mostly-pass baseline
+- [ ] Add harder adversarial variants for the existing canonical cases
+- [ ] Add more behavior-driven evaluation for multi-turn, retrieval, and tool abuse cases

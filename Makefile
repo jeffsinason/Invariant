@@ -6,3 +6,12 @@ benchmark-mock:
 
 live-matrix:
 	bash scripts/live_provider_matrix.sh
+
+api:
+	cd harness && .venv/bin/python run_api.py
+
+ui-install:
+	cd frontend && npm install
+
+ui:
+	cd frontend && npm run dev

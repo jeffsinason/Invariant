@@ -13,6 +13,7 @@ class Settings:
     model_name: str
     openai_api_key: str
     anthropic_api_key: str
+    mistral_api_key: str
 
 
 def get_settings() -> Settings:
@@ -24,4 +25,5 @@ def get_settings() -> Settings:
         model_name=os.getenv("MODEL_NAME", ""),
         openai_api_key=os.getenv("OPENAI_API_KEY", ""),
         anthropic_api_key=os.getenv("ANTHROPIC_API_KEY", ""),
+        mistral_api_key=os.getenv("MISTRAL_API_KEY", ""),
     )

@@ -60,6 +60,7 @@ class CaseResult:
     model_name: str
     vulnerable: bool
     response_text: str
+    evaluation_label: str | None = None
     error_type: str | None = None
     error_message: str | None = None
     notes: str = ""

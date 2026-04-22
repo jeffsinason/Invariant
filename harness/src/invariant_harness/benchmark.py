@@ -9,6 +9,7 @@ def normalize_result(result: CaseResult) -> dict:
         "provider": result.provider,
         "model_name": result.model_name,
         "vulnerable": result.vulnerable,
+        "evaluation_label": result.evaluation_label,
         "response_text": result.response_text,
         "request_id": result.request_id,
         "stop_reason": result.stop_reason,

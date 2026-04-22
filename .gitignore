@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 harness/results/*.json
 harness/src/invariant_harness.egg-info/
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
