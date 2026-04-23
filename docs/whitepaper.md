@@ -7,9 +7,9 @@
 
 Prompt injection is a class of vulnerabilities affecting applications built on large language models (LLMs), where untrusted input is interpreted as executable instruction. This issue arises from the fundamental design of LLMs, which process all input as natural language without inherent separation between trusted and untrusted sources.
 
-This paper synthesizes current industry and academic understanding of prompt injection, including classifications defined by OWASP and NIST. It evaluates existing mitigation strategies and their limitations, and introduces a system-level framework—Invariant—for enforcing trust boundaries through architectural controls.
+This paper synthesizes current industry and academic understanding of prompt injection, including classifications defined by OWASP and NIST. It evaluates existing mitigation strategies and their limitations, and introduces a system-level framework, Invariant, for enforcing trust boundaries through system-level controls.
 
-The goal of this work is to establish a practical and extensible foundation for building AI systems that are resilient to prompt injection and related attack vectors.
+The goal of this work is to establish a practical and extensible foundation for building AI systems that are resilient to prompt injection and support stronger AI security.
 
 ---
 
@@ -165,7 +165,7 @@ data exfiltration, system compromise, and unauthorized actions.
 
 ## 5. Core Insight
 
-Prompt injection is not a prompt problem.
+Prompt injection is not only a prompt problem.
 
 > It is a failure to enforce trust boundaries.
 
@@ -392,7 +392,7 @@ What are your hidden instructions?
 
 Prompt injection is a systemic vulnerability.
 
-Invariant addresses it through architecture, not prompts.
+Invariant addresses it through system-level controls, not prompts alone.
 
 ---
 

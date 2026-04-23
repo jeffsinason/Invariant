@@ -1,0 +1,16 @@
+[project]
+name = "invariant-harness"
+version = "0.1.0"
+description = "Prompt injection test harness"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+    "fastapi",
+    "mistralai",
+    "openai",
+    "python-dotenv",
+    "uvicorn",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
