@@ -7,6 +7,27 @@ from pydantic import BaseModel, Field
 
 from invariant_harness.benchmark import build_benchmark_report
 from invariant_harness.case_registry import CASE_REGISTRY
+from invariant_harness.custom_testing import (
+    delete_custom_scenario,
+    list_custom_run_groups,
+    list_custom_runs,
+    list_custom_scenarios,
+    load_custom_run,
+    load_custom_run_group,
+    load_custom_scenario,
+    normalize_custom_scenario,
+    run_custom_scenario,
+    save_custom_run_artifact,
+    save_custom_run_group_artifact,
+    save_custom_scenario,
+    validate_custom_scenario,
+)
+from invariant_harness.custom_testing.types import (
+    CustomScenario,
+    CustomScenarioRunRequest,
+    SavedCustomScenarioRunRequest,
+    ValidationRequest,
+)
 from invariant_harness.models import DEFAULT_MODEL_NAMES, list_supported_models, load_model
 from invariant_harness.result_store import (
     get_results_dir,
@@ -198,3 +219,139 @@ def _read_json(path: Path) -> dict[str, Any]:
     import json
 
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@app.get("/custom-tests")
+def list_saved_custom_tests() -> list[dict[str, Any]]:
+    return list_custom_scenarios()
+
+
+@app.post("/custom-tests")
+def create_custom_test(scenario: CustomScenario) -> dict[str, Any]:
+    try:
+        normalized, warnings = validate_custom_scenario(
+            scenario,
+            for_save=scenario.save_preferences.save_scenario_by_default,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail={"error_type": "ValueError", "error_message": str(exc)}) from exc
+
+    path = save_custom_scenario(normalized)
+    return {
+        "scenario": normalized.model_dump(),
+        "validation_warnings": warnings,
+        "saved_path": str(path),
+    }
+
+
+@app.post("/custom-tests/validate")
+def validate_custom_test(request: ValidationRequest) -> dict[str, Any]:
+    try:
+        normalized, warnings = validate_custom_scenario(request.scenario, for_save=request.for_save)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail={"error_type": "ValueError", "error_message": str(exc)}) from exc
+    return {
+        "valid": True,
+        "scenario": normalize_custom_scenario(normalized).model_dump(),
+        "validation_warnings": warnings,
+    }
+
+
+@app.post("/custom-tests/run")
+def run_unsaved_custom_test(request: CustomScenarioRunRequest) -> dict[str, Any]:
+    try:
+        payload = run_custom_scenario(request.scenario)
+    except (RuntimeError, ValueError) as exc:
+        raise HTTPException(status_code=400, detail={"error_type": type(exc).__name__, "error_message": str(exc)}) from exc
+
+    saved_path = None
+    if request.save_run:
+        if payload["artifact_type"] == "custom_scenario_run":
+            saved_path = str(
+                save_custom_run_artifact(
+                    payload,
+                    scenario_name=payload["scenario_id"],
+                    provider=payload["provider"],
+                    model_name=payload["model_name"],
+                    timestamp_utc=payload["timestamp_utc"],
+                )
+            )
+        else:
+            saved_path = str(
+                save_custom_run_group_artifact(
+                    payload,
+                    scenario_name=payload["scenario_id"],
+                    timestamp_utc=payload["generated_at_utc"],
+                )
+            )
+        payload["saved_path"] = saved_path
+    return {"result": payload}
+
+
+@app.post("/custom-tests/{scenario_id}/run")
+def run_saved_custom_test(scenario_id: str, request: SavedCustomScenarioRunRequest) -> dict[str, Any]:
+    try:
+        scenario = load_custom_scenario(scenario_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Custom scenario not found") from exc
+    return run_unsaved_custom_test(CustomScenarioRunRequest(scenario=scenario, save_run=request.save_run))
+
+
+@app.get("/custom-tests/{scenario_id}")
+def get_custom_test(scenario_id: str) -> dict[str, Any]:
+    try:
+        scenario = load_custom_scenario(scenario_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Custom scenario not found") from exc
+    return {"scenario": scenario.model_dump()}
+
+
+@app.put("/custom-tests/{scenario_id}")
+def update_custom_test(scenario_id: str, scenario: CustomScenario) -> dict[str, Any]:
+    try:
+        normalized, warnings = validate_custom_scenario(
+            scenario.model_copy(update={"scenario_id": scenario_id}),
+            for_save=True,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail={"error_type": "ValueError", "error_message": str(exc)}) from exc
+    path = save_custom_scenario(normalized)
+    return {
+        "scenario": normalized.model_dump(),
+        "validation_warnings": warnings,
+        "saved_path": str(path),
+    }
+
+
+@app.delete("/custom-tests/{scenario_id}")
+def delete_custom_test(scenario_id: str) -> dict[str, bool]:
+    deleted = delete_custom_scenario(scenario_id)
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Custom scenario not found")
+    return {"deleted": True}
+
+
+@app.get("/custom-test-runs")
+def list_saved_custom_runs() -> list[dict[str, Any]]:
+    return list_custom_runs()
+
+
+@app.get("/custom-test-runs/{artifact_name}")
+def get_custom_test_run(artifact_name: str) -> dict[str, Any]:
+    try:
+        return load_custom_run(artifact_name)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Custom test run artifact not found") from exc
+
+
+@app.get("/custom-test-run-groups")
+def list_saved_custom_run_groups() -> list[dict[str, Any]]:
+    return list_custom_run_groups()
+
+
+@app.get("/custom-test-run-groups/{artifact_name}")
+def get_custom_test_run_group(artifact_name: str) -> dict[str, Any]:
+    try:
+        return load_custom_run_group(artifact_name)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Custom test run group artifact not found") from exc

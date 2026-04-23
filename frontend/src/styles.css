@@ -23,7 +23,8 @@ body {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -282,6 +283,25 @@ td {
   color: #5a6a85;
 }
 
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #5a6a85;
+}
+
+.field-help {
+  color: #5a6a85;
+  font-size: 0.9rem;
+}
+
 form label {
   display: flex;
   flex-direction: column;
@@ -290,12 +310,17 @@ form label {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   padding: 0.65rem 0.75rem;
   border: 1px solid #c9d4e5;
   border-radius: 8px;
   background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .checkbox-row {
@@ -331,6 +356,59 @@ select {
   border-radius: 8px;
 }
 
+.json-editor {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  min-height: 20rem;
+}
+
+.compact-json-editor {
+  min-height: 10rem;
+}
+
+.builder-section {
+  border-top: 1px solid #d8dfeb;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nested-section {
+  border: 1px solid #d8dfeb;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fbfcfe;
+}
+
+.target-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.target-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.target-actions {
+  display: flex;
+  align-items: end;
+  padding-bottom: 0.9rem;
+}
+
+.file-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-text {
+  color: #8b1f2d;
+  margin: 0 0 1rem;
+}
+
 .button-primary:disabled {
   opacity: 0.6;
   cursor: wait;
@@ -338,6 +416,7 @@ select {
 
 .inline-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
   margin-bottom: 1rem;
 }
@@ -380,6 +459,21 @@ select {
 
 .insight-banner span {
   color: #465772;
+}
+
+.template-guidance {
+  margin-bottom: 1rem;
+}
+
+.template-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.template-meta-grid strong {
+  display: block;
+  margin-bottom: 0.35rem;
 }
 
 .empty-state {
@@ -555,6 +649,14 @@ select {
   margin: 0 0.85rem 0.85rem;
 }
 
+.details-body {
+  padding: 0.85rem;
+}
+
+.details-body > :last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1080px) {
   .three-up,
   .two-up {
@@ -564,7 +666,8 @@ select {
   .comparison-columns,
   .comparison-picker-grid,
   .comparison-head,
-  .summary-strip {
+  .summary-strip,
+  .template-meta-grid {
     grid-template-columns: 1fr;
   }
 

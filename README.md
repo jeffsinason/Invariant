@@ -118,6 +118,13 @@ make ui-install
 make ui
 ```
 
+Run the frontend test suite:
+
+```bash
+cd frontend
+npm test
+```
+
 The live matrix script will:
 - run core and extended cases against OpenAI when `OPENAI_API_KEY` is available
 - run core and extended cases against Anthropic when `ANTHROPIC_API_KEY` is available
@@ -154,6 +161,7 @@ Then open:
 Current front-end workflows:
 - run a single case from the `Run Case` tab
 - run a benchmark and compare the current benchmark to a selected saved benchmark from the `Run Benchmark` tab
+- build and run guided or advanced custom injection scenarios from the `Custom Test` tab
 - compare run artifacts, benchmark artifacts, and provider differences from the `Artifacts` tab
 - review operator summaries first, then expand into technical metadata and raw payloads when needed
 
@@ -167,6 +175,12 @@ Current front-end layout:
   - compact benchmark run control
   - `Current Benchmark Controls` and `Selected Benchmark Controls`
   - side-by-side `Current Benchmark` and `Selected Benchmark` panels
+- `Custom Test` tab:
+  - guided and advanced scenario authoring modes
+  - current custom result
+  - saved scenario selection
+  - saved custom run and run-group inspection
+  - saved custom run and run-group comparison
 - `Artifacts` tab:
   - `Run Comparison`
   - `Benchmark Comparison`

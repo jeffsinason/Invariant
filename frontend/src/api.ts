@@ -3,6 +3,12 @@ import type {
   BenchmarkRunResponse,
   CaseResultArtifact,
   CaseRunResponse,
+  CustomRunArtifact,
+  CustomRunGroupArtifact,
+  CustomRunResponse,
+  CustomScenarioResponse,
+  CustomScenarioSummary,
+  CustomValidationResponse,
   ModelInfo,
   ProviderInfo,
 } from "./types";
@@ -77,4 +83,47 @@ export function runBenchmark(input: {
     method: "POST",
     body: JSON.stringify(input),
   });
+}
+
+export function fetchCustomTests(): Promise<CustomScenarioSummary[]> {
+  return request<CustomScenarioSummary[]>("/custom-tests");
+}
+
+export function fetchCustomTest(scenarioId: string): Promise<{ scenario: CustomScenarioResponse["scenario"] }> {
+  return request<{ scenario: CustomScenarioResponse["scenario"] }>(`/custom-tests/${encodeURIComponent(scenarioId)}`);
+}
+
+export function createCustomTest(input: CustomScenarioResponse["scenario"]): Promise<CustomScenarioResponse> {
+  return request<CustomScenarioResponse>("/custom-tests", {
+    method: "POST",
+    body: JSON.stringify(input),
+  });
+}
+
+export function validateCustomTest(input: {
+  scenario: CustomScenarioResponse["scenario"];
+  for_save: boolean;
+}): Promise<CustomValidationResponse> {
+  return request<CustomValidationResponse>("/custom-tests/validate", {
+    method: "POST",
+    body: JSON.stringify(input),
+  });
+}
+
+export function runCustomTest(input: {
+  scenario: CustomScenarioResponse["scenario"];
+  save_run: boolean;
+}): Promise<CustomRunResponse> {
+  return request<CustomRunResponse>("/custom-tests/run", {
+    method: "POST",
+    body: JSON.stringify(input),
+  });
+}
+
+export function fetchCustomRuns(): Promise<CustomRunArtifact[]> {
+  return request<CustomRunArtifact[]>("/custom-test-runs");
+}
+
+export function fetchCustomRunGroups(): Promise<CustomRunGroupArtifact[]> {
+  return request<CustomRunGroupArtifact[]>("/custom-test-run-groups");
 }
