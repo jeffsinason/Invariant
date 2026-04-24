@@ -2,6 +2,9 @@
 
 **A system-level security framework for enforcing trust boundaries in AI applications.**
 
+**Current release:** `0.1.0-alpha`  
+**Release posture:** public technical preview
+
 ---
 
 ## 🚨 The Problem
@@ -25,6 +28,19 @@ Invariant defines and enforces **non-negotiable rules** for AI systems:
 > Things that must always be true, no matter what the model sees.
 
 Instead of trying to fix prompts, Invariant secures the system around them.
+
+## What This Release Delivers
+
+This technical preview delivers:
+- a prompt injection and trust-boundary test harness
+- a browser-based operator console
+- canonical benchmark execution
+- guided and advanced custom injection testing
+- saved artifacts for runs, benchmarks, and custom scenarios
+
+This release does **not** yet deliver the full injection prevention framework.
+It is the testing and operator-facing surface for that broader EchoForgeX
+direction.
 
 ---
 
@@ -70,16 +86,99 @@ Invariant provides the architecture to enforce these rules.
 
 ---
 
-## 🚀 Roadmap
+## License
 
-- Define core interfaces  
-- Build reference implementation  
-- Add adversarial testing suite  
-- Integrate with major LLM providers  
+This repository is licensed under the Apache License 2.0.
+
+See:
+- [LICENSE](/Users/jeffreysinason/Development/Invariant/LICENSE)
+- [CHANGELOG.md](/Users/jeffreysinason/Development/Invariant/CHANGELOG.md)
 
 ---
 
-## Running the Suite
+## OSS, IP, and Branding
+
+Invariant is an EchoForgeX project released as open source software.
+
+The intent of this repository is to distribute the harness and operator console
+openly while supporting the larger EchoForgeX injection prevention framework
+direction.
+
+For a short explanation of the OSS, IP, and branding posture, see:
+- [oss_ip_and_branding.md](/Users/jeffreysinason/Development/Invariant/docs/oss_ip_and_branding.md)
+
+For repository governance and reporting, see:
+- [CONTRIBUTING.md](/Users/jeffreysinason/Development/Invariant/CONTRIBUTING.md)
+- [SECURITY.md](/Users/jeffreysinason/Development/Invariant/SECURITY.md)
+
+Current release posture:
+- `0.1.0-alpha`
+- public technical preview
+
+---
+
+## Quickstart
+
+Start here:
+- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
+
+Short version:
+
+```bash
+git clone git@github.com:jeffsinason/Invariant.git
+cd Invariant
+cd harness
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+cd ../frontend
+npm install
+cd ..
+cp harness/.env.example harness/.env
+make api
+make ui
+```
+
+Then open:
+- [http://127.0.0.1:5173](http://127.0.0.1:5173)
+
+For a first end-to-end run without API keys:
+- use provider `mock`
+- run `safe_baseline` from `Run Case`
+
+For release boundaries and support expectations, see:
+- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
+
+---
+
+## UI Preview
+
+Run case workflow:
+
+![Invariant Run Case](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-case.png)
+
+Run benchmark workflow:
+
+![Invariant Run Benchmark](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-benchmark.png)
+
+Custom injection testing workflow:
+
+![Invariant Custom Test](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-custom-test.png)
+
+Artifact comparison workflow:
+
+![Invariant Artifacts](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-artifacts.png)
+
+---
+
+## Running and Testing
+
+Primary workflows:
+- `Run Case` for a single canonical test
+- `Run Benchmark` for provider and family comparison
+- `Custom Test` for guided or advanced scenario authoring
+- `Artifacts` for saved run, benchmark, and comparison review
 
 Run the full local test suite:
 
@@ -124,6 +223,12 @@ Run the frontend test suite:
 cd frontend
 npm test
 ```
+
+Known frontend release-hygiene note:
+- `npm audit` currently reports `2` moderate vulnerabilities in the Vite/esbuild
+  dev-server toolchain
+- these affect development tooling posture, not the built static assets
+- they should still be reviewed before broader public attention
 
 The live matrix script will:
 - run core and extended cases against OpenAI when `OPENAI_API_KEY` is available
@@ -204,10 +309,13 @@ Current retrieval benchmark labels:
 - `safe_other`
 
 For setup and workflow details, see:
+- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
 - [live_testing_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/live_testing_workflow.md)
 - [benchmark_execution_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/benchmark_execution_workflow.md)
 - [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
 - [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
+- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
+- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
 
 ---
 

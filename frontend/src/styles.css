@@ -74,6 +74,28 @@ td {
   font-size: 2rem;
 }
 
+.header-identity {
+  min-width: 0;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-row h1 {
+  margin: 0;
+}
+
+.product-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
 .eyebrow {
   margin: 0 0 0.35rem;
   text-transform: uppercase;
@@ -686,6 +708,10 @@ textarea {
 
   .header-band {
     flex-direction: column;
+  }
+
+  .title-row {
+    align-items: flex-start;
   }
 
   .status-stack {

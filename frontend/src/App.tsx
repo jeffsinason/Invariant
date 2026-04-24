@@ -2018,9 +2018,12 @@ export function App() {
   return (
     <main className="shell">
       <section className="header-band">
-        <div>
+        <div className="header-identity">
           <p className="eyebrow">EchoForgeX / Invariant</p>
-          <h1>Invariant Operator Console</h1>
+          <div className="title-row">
+            <img className="product-icon" src="/invariant-icon.svg" alt="Invariant icon" />
+            <h1>Invariant Operator Console</h1>
+          </div>
           <p className="subtitle">
             Run injection cases, inspect benchmark artifacts, and compare provider behavior
             without leaving the harness.

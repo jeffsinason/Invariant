@@ -1,0 +1,34 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGlow" x1="28" y1="20" x2="228" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2744"/>
+      <stop offset="1" stop-color="#0A1628"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="64" y1="56" x2="196" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A9BE8"/>
+      <stop offset="0.55" stop-color="#2D7DD2"/>
+      <stop offset="1" stop-color="#00C2FF"/>
+    </linearGradient>
+    <linearGradient id="arcStroke" x1="68" y1="34" x2="124" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00C2FF"/>
+      <stop offset="1" stop-color="#4A9BE8"/>
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect x="12" y="12" width="232" height="232" rx="44" fill="url(#bgGlow)"/>
+  <circle cx="188" cy="60" r="34" fill="#2D7DD2" opacity="0.18" filter="url(#softGlow)"/>
+
+  <path d="M82 84C82 75.1634 89.1634 68 98 68H158C166.837 68 174 75.1634 174 84V111.277C174 146.634 154.189 178.721 122.8 194.2L128 197L133.2 194.2C101.811 178.721 82 146.634 82 111.277V84Z" fill="url(#shieldFill)"/>
+
+  <path d="M111 95C111 91.6863 113.686 89 117 89H139C142.314 89 145 91.6863 145 95V104C145 107.314 142.314 110 139 110H134V146C134 149.314 131.314 152 128 152C124.686 152 122 149.314 122 146V110H117C113.686 110 111 107.314 111 104V95Z" fill="#0A1628"/>
+  <rect x="95" y="98" width="10" height="44" rx="5" fill="#F8FAFC" opacity="0.96"/>
+  <rect x="151" y="98" width="10" height="44" rx="5" fill="#F8FAFC" opacity="0.96"/>
+  <path d="M104 163C104 159.686 106.686 157 110 157H146C149.314 157 152 159.686 152 163V169C152 172.314 149.314 175 146 175H110C106.686 175 104 172.314 104 169V163Z" fill="#F8FAFC" opacity="0.92"/>
+
+  <path d="M73 65C73 50.6406 84.6406 39 99 39" stroke="url(#arcStroke)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M57 65C57 41.804 75.804 23 99 23" stroke="url(#arcStroke)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M41 65C41 32.9675 66.9675 7 99 7" stroke="url(#arcStroke)" stroke-width="12" stroke-linecap="round" opacity="0.82"/>
+</svg>
