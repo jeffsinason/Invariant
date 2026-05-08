@@ -20,19 +20,25 @@ with open('pyproject.toml', 'rb') as f:
     print(tomllib.load(f)['project']['version'])
 ")
 RC_VERSION="${CURRENT}rc${RC}"
+TEST_NAME="invariant-harness-jeffsinason"
 
-echo "Releasing invariant-harness ${RC_VERSION} to TestPyPI..."
+echo "Releasing ${TEST_NAME} ${RC_VERSION} to TestPyPI..."
 
-sed -i.bak "s/version = \"${CURRENT}\"/version = \"${RC_VERSION}\"/" pyproject.toml
+cp pyproject.toml pyproject.toml.bak
+trap 'mv pyproject.toml.bak pyproject.toml' EXIT
+
+sed -i.tmp \
+  -e "s/version = \"${CURRENT}\"/version = \"${RC_VERSION}\"/" \
+  -e "s/^name = \"invariant-harness\"/name = \"${TEST_NAME}\"/" \
+  pyproject.toml
+rm -f pyproject.toml.tmp
 
 rm -rf dist/
 python3 -m build
 
 twine upload --repository testpypi dist/*
 
-mv pyproject.toml.bak pyproject.toml
-
 echo ""
-echo "Published ${RC_VERSION} to TestPyPI."
+echo "Published ${TEST_NAME}==${RC_VERSION} to TestPyPI."
 echo "Install with:"
-echo "  pip install --index-url https://test.pypi.org/simple/ invariant-harness==${RC_VERSION}"
+echo "  pip install --index-url https://test.pypi.org/simple/ ${TEST_NAME}==${RC_VERSION}"
