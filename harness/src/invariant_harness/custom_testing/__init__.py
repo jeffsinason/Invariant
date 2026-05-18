@@ -15,7 +15,10 @@ from invariant_harness.custom_testing.storage import (
     save_custom_scenario,
 )
 from invariant_harness.custom_testing.types import CustomScenario
-from invariant_harness.custom_testing.validation import normalize_custom_scenario, validate_custom_scenario
+from invariant_harness.custom_testing.validation import (
+    normalize_custom_scenario,
+    validate_custom_scenario,
+)
 
 __all__ = [
     "CustomScenario",

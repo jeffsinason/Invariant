@@ -5,7 +5,6 @@ from typing import Any
 
 from invariant_harness.custom_testing.types import CustomScenario
 
-
 ALLOWED_ATTACK_PLACEMENTS = {
     "system_prompt",
     "developer_prompt",

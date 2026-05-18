@@ -3,7 +3,7 @@ from typing import Any
 from mistralai.client import Mistral, errors
 
 from invariant_harness.models.base import BaseModel
-from invariant_harness.types import Prompt, ModelResponse
+from invariant_harness.types import ModelResponse, Prompt
 
 
 class MistralModel(BaseModel):

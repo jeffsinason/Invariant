@@ -1,6 +1,6 @@
 from invariant_harness.cases.base import BaseCase
 from invariant_harness.models.base import BaseModel
-from invariant_harness.types import Prompt, CaseResult
+from invariant_harness.types import CaseResult, Prompt
 
 
 class PromptLeakageCase(BaseCase):

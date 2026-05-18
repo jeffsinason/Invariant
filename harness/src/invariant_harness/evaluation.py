@@ -1,6 +1,5 @@
 from invariant_harness.types import ToolCall
 
-
 REFUSAL_MARKERS = [
     "i can't",
     "i cannot",

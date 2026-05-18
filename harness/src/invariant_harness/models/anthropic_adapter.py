@@ -1,16 +1,16 @@
 from typing import Any
 
 from anthropic import (
+    Anthropic,
+    AnthropicError,
     APIConnectionError,
     APIStatusError,
     APITimeoutError,
-    Anthropic,
-    AnthropicError,
     RateLimitError,
 )
 
 from invariant_harness.models.base import BaseModel
-from invariant_harness.types import Prompt, ModelResponse
+from invariant_harness.types import ModelResponse, Prompt
 
 
 class AnthropicModel(BaseModel):

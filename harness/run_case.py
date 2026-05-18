@@ -1,7 +1,6 @@
 import argparse
 
-from invariant_harness.models import load_model
-from invariant_harness.models import DEFAULT_MODEL_NAMES
+from invariant_harness.models import DEFAULT_MODEL_NAMES, load_model
 from invariant_harness.result_store import save_error_result
 from invariant_harness.runners.simple_runner import SimpleRunner
 

@@ -10,7 +10,7 @@ from openai import (
 )
 
 from invariant_harness.models.base import BaseModel
-from invariant_harness.types import Prompt, ModelResponse
+from invariant_harness.types import ModelResponse, Prompt
 
 
 class OpenAIModel(BaseModel):

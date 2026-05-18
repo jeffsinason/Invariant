@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+import re
 from dataclasses import asdict
 from datetime import UTC, datetime
-import re
 from typing import Any
 
 from invariant_harness.custom_testing.types import (

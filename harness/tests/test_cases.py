@@ -4,8 +4,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from invariant_harness.cases.prompt_leakage_case import _is_prompt_leak
 from invariant_harness.case_registry import CASE_REGISTRY
+from invariant_harness.cases.prompt_leakage_case import _is_prompt_leak
 from invariant_harness.models.mock_adapter import MockModel
 from invariant_harness.runners.simple_runner import SimpleRunner
 

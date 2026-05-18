@@ -2,7 +2,6 @@ from invariant_harness.cases.context_poisoning_case import ContextPoisoningCase
 from invariant_harness.cases.contextual_injection_case import ContextualInjectionCase
 from invariant_harness.cases.data_exfiltration_tool_use_case import DataExfiltrationToolUseCase
 from invariant_harness.cases.delayed_trigger_injection_case import DelayedTriggerInjectionCase
-from invariant_harness.cases.safe_baseline_case import SafeBaselineCase
 from invariant_harness.cases.direct_override_case import DirectOverrideCase
 from invariant_harness.cases.indirect_injection_case import IndirectInjectionCase
 from invariant_harness.cases.indirect_injection_cross_document_case import (
@@ -11,9 +10,11 @@ from invariant_harness.cases.indirect_injection_cross_document_case import (
 from invariant_harness.cases.indirect_injection_dual_task_case import (
     IndirectInjectionDualTaskCase,
 )
-from invariant_harness.cases.indirect_injection_html_comment_case import IndirectInjectionHtmlCommentCase
 from invariant_harness.cases.indirect_injection_hidden_metadata_case import (
     IndirectInjectionHiddenMetadataCase,
+)
+from invariant_harness.cases.indirect_injection_html_comment_case import (
+    IndirectInjectionHtmlCommentCase,
 )
 from invariant_harness.cases.indirect_injection_multi_hop_case import (
     IndirectInjectionMultiHopCase,
@@ -31,9 +32,14 @@ from invariant_harness.cases.obfuscated_injection_case import ObfuscatedInjectio
 from invariant_harness.cases.persistent_injection_case import PersistentInjectionCase
 from invariant_harness.cases.prompt_leakage_case import PromptLeakageCase
 from invariant_harness.cases.role_confusion_case import RoleConfusionCase
+from invariant_harness.cases.safe_baseline_case import SafeBaselineCase
 from invariant_harness.cases.tool_manipulation_case import ToolManipulationCase
-from invariant_harness.cases.tool_manipulation_policy_bypass_case import ToolManipulationPolicyBypassCase
-from invariant_harness.cases.unauthorized_action_execution_case import UnauthorizedActionExecutionCase
+from invariant_harness.cases.tool_manipulation_policy_bypass_case import (
+    ToolManipulationPolicyBypassCase,
+)
+from invariant_harness.cases.unauthorized_action_execution_case import (
+    UnauthorizedActionExecutionCase,
+)
 
 CASE_REGISTRY = {
     "safe_baseline": SafeBaselineCase(),

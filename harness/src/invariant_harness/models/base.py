@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from invariant_harness.types import Prompt, ModelResponse
+from invariant_harness.types import ModelResponse, Prompt
 
 
 class BaseModel(ABC):
