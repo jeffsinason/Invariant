@@ -20,3 +20,16 @@ jobs:
       - run: pip install ruff==0.15.13 vulture==2.14
       - run: ruff check .
       - run: vulture . vulture_whitelist.py --min-confidence 80
+
+  no-local-paths:
+    name: No absolute local paths
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail on absolute local paths in tracked files
+        run: |
+          # Bracketed pattern so this workflow file doesn't match itself.
+          if git grep -nE '/[U]sers/'; then
+            echo "::error::Tracked files contain absolute local paths. Use repo-relative links."
+            exit 1
+          fi
