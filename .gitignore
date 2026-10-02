@@ -8,3 +8,11 @@ harness/src/invariant_harness.egg-info/
 frontend/node_modules/
 frontend/dist/
 frontend/*.tsbuildinfo
+
+# Internal working files (not for the public repo)
+.project-status.md
+CLAUDE.md
+AGENTS.md
+backlog.md
+tasks/
+.agent-bridge/
