@@ -272,7 +272,7 @@ make live-matrix
 
 After the quickstart succeeds, use these documents:
 
-- [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
-- [live_testing_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/live_testing_workflow.md)
-- [benchmark_execution_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/benchmark_execution_workflow.md)
-- [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
+- [custom_injection_testing_user_manual.md](custom_injection_testing_user_manual.md)
+- [live_testing_workflow.md](live_testing_workflow.md)
+- [benchmark_execution_workflow.md](benchmark_execution_workflow.md)
+- [frontend_architecture.md](frontend_architecture.md)

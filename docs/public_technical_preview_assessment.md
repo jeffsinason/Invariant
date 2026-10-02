@@ -6,7 +6,7 @@ This document assesses whether Invariant is ready to ship as a **public
 technical preview / alpha**.
 
 It is based on the release criteria defined in:
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
+- [public_release_readiness.md](public_release_readiness.md)
 
 The goal is to answer three questions clearly:
 
@@ -61,7 +61,7 @@ Evidence:
 **Status: met, after quickstart hardening**
 
 Evidence:
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md) exists
+- [quickstart.md](quickstart.md) exists
 - fresh-clone validation was performed
 - the backend install gap was identified and fixed via the editable install path
 
@@ -133,15 +133,15 @@ Evidence:
 **Status: complete**
 
 Evidence:
-- [LICENSE](/Users/jeffreysinason/Development/Invariant/LICENSE)
-- [oss_ip_and_branding.md](/Users/jeffreysinason/Development/Invariant/docs/oss_ip_and_branding.md)
+- [LICENSE](../LICENSE)
+- [oss_ip_and_branding.md](oss_ip_and_branding.md)
 
 ### Contributing guidance build
 
 **Status: complete**
 
 Evidence:
-- [CONTRIBUTING.md](/Users/jeffreysinason/Development/Invariant/CONTRIBUTING.md)
+- [CONTRIBUTING.md](../CONTRIBUTING.md)
 - issue templates
 
 ### Security disclosure path build
@@ -149,7 +149,7 @@ Evidence:
 **Status: complete**
 
 Evidence:
-- [SECURITY.md](/Users/jeffreysinason/Development/Invariant/SECURITY.md)
+- [SECURITY.md](../SECURITY.md)
 
 ### Quickstart hardening build
 
@@ -268,7 +268,7 @@ The answer is:
 
 ## Related Documents
 
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
-- [current_release_hardening_pass.md](/Users/jeffreysinason/Development/Invariant/docs/current_release_hardening_pass.md)
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
-- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
+- [public_release_readiness.md](public_release_readiness.md)
+- [current_release_hardening_pass.md](current_release_hardening_pass.md)
+- [quickstart.md](quickstart.md)
+- [support_and_limitations.md](support_and_limitations.md)

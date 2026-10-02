@@ -113,9 +113,9 @@ Recommended stack:
 This phase is the bridge between research code and a usable research platform.
 
 Supporting front-end planning documents for this phase:
-- [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
-- [ui_roadmap.md](/Users/jeffreysinason/Development/Invariant/docs/ui_roadmap.md)
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
+- [frontend_architecture.md](frontend_architecture.md)
+- [ui_roadmap.md](ui_roadmap.md)
+- [public_release_readiness.md](public_release_readiness.md)
 
 ## Phase 3 — Injection Defense Framework
 

@@ -4,7 +4,7 @@ This document describes how to run the Invariant benchmark matrix and interpret 
 
 ## Benchmark Entry Point
 
-Use [run_benchmark.py](/Users/jeffreysinason/Development/Invariant/harness/run_benchmark.py) from [harness](/Users/jeffreysinason/Development/Invariant/harness):
+Use [run_benchmark.py](../harness/run_benchmark.py) from [harness](../harness):
 
 ```bash
 python3 run_benchmark.py --provider mock --cases all

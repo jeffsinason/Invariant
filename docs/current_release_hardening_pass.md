@@ -164,7 +164,7 @@ This keeps the current release coherent and prevents last-minute scope creep.
 
 ## Related Documents
 
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
-- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
-- [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
+- [public_release_readiness.md](public_release_readiness.md)
+- [quickstart.md](quickstart.md)
+- [support_and_limitations.md](support_and_limitations.md)
+- [frontend_architecture.md](frontend_architecture.md)

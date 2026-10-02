@@ -489,8 +489,8 @@ This keeps the scenario understandable while still producing reusable artifacts.
 ## Related Documents
 
 For deeper implementation or design detail, see:
-- [custom_injection_testing_design.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_design.md)
-- [custom_injection_testing_technical_design.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_technical_design.md)
-- [custom_injection_testing_implementation_plan.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_implementation_plan.md)
-- [custom_injection_testing_help_ui_spec.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_help_ui_spec.md)
-- [custom_injection_testing_template_catalog.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_template_catalog.md)
+- [custom_injection_testing_design.md](custom_injection_testing_design.md)
+- [custom_injection_testing_technical_design.md](custom_injection_testing_technical_design.md)
+- [custom_injection_testing_implementation_plan.md](custom_injection_testing_implementation_plan.md)
+- [custom_injection_testing_help_ui_spec.md](custom_injection_testing_help_ui_spec.md)
+- [custom_injection_testing_template_catalog.md](custom_injection_testing_template_catalog.md)

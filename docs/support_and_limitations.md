@@ -126,6 +126,6 @@ This release is not yet ideal for:
 
 ## Recommended Reading
 
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
-- [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
+- [quickstart.md](quickstart.md)
+- [custom_injection_testing_user_manual.md](custom_injection_testing_user_manual.md)
+- [public_release_readiness.md](public_release_readiness.md)

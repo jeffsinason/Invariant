@@ -4,7 +4,7 @@ This document describes how to run Invariant against live providers.
 
 ## Prerequisites
 
-From [harness/.env.example](/Users/jeffreysinason/Development/Invariant/harness/.env.example), configure:
+From [harness/.env.example](../harness/.env.example), configure:
 
 ```env
 MODEL_PROVIDER=mock
@@ -17,7 +17,7 @@ You can keep `MODEL_PROVIDER=mock` and select live providers explicitly with `--
 
 ## Run Individual Cases
 
-From [harness](/Users/jeffreysinason/Development/Invariant/harness):
+From [harness](../harness):
 
 ```bash
 python3 run_case.py direct_override --provider openai
@@ -54,7 +54,7 @@ Each run prints:
 
 ## Saved Results
 
-Successful runs are saved to [harness/results](/Users/jeffreysinason/Development/Invariant/harness/results) as JSON.
+Successful runs are saved to [harness/results](../harness/results) as JSON.
 
 Saved results include:
 - normalized top-level case metadata

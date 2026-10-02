@@ -368,6 +368,6 @@ After the hosted-provider wave:
 
 ## Related Documents
 
-- [current_release_hardening_pass.md](/Users/jeffreysinason/Development/Invariant/docs/current_release_hardening_pass.md)
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
-- [phased_build_plan.md](/Users/jeffreysinason/Development/Invariant/docs/phased_build_plan.md)
+- [current_release_hardening_pass.md](current_release_hardening_pass.md)
+- [public_release_readiness.md](public_release_readiness.md)
+- [phased_build_plan.md](phased_build_plan.md)

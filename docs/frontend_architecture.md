@@ -13,12 +13,12 @@ The front-end is not a separate system. It should act as an operator layer on to
 This document describes the front-end architecture baseline.
 
 Related documents:
-- [phased_build_plan.md](/Users/jeffreysinason/Development/Invariant/docs/phased_build_plan.md)
-- [ui_roadmap.md](/Users/jeffreysinason/Development/Invariant/docs/ui_roadmap.md)
-- [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
-- [custom_injection_testing_design.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_design.md)
-- [custom_injection_testing_technical_design.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_technical_design.md)
-- [custom_injection_testing_help_ui_spec.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_help_ui_spec.md)
+- [phased_build_plan.md](phased_build_plan.md)
+- [ui_roadmap.md](ui_roadmap.md)
+- [custom_injection_testing_user_manual.md](custom_injection_testing_user_manual.md)
+- [custom_injection_testing_design.md](custom_injection_testing_design.md)
+- [custom_injection_testing_technical_design.md](custom_injection_testing_technical_design.md)
+- [custom_injection_testing_help_ui_spec.md](custom_injection_testing_help_ui_spec.md)
 
 ## Goals
 
@@ -344,7 +344,7 @@ Add Playwright coverage for:
 - run-history rendering
 - provider comparison rendering
 
-For the post-baseline evolution of the console and custom-test workflows, see [ui_roadmap.md](/Users/jeffreysinason/Development/Invariant/docs/ui_roadmap.md).
+For the post-baseline evolution of the console and custom-test workflows, see [ui_roadmap.md](ui_roadmap.md).
 
 ## Relationship to the Next Framework Phase
 

@@ -254,10 +254,10 @@ Use this checklist before opening the project for broad public use.
   system-level controls
 
 Current captured UI assets for public packaging:
-- [invariant-console-run-case.png](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-case.png)
-- [invariant-console-run-benchmark.png](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-benchmark.png)
-- [invariant-console-custom-test.png](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-custom-test.png)
-- [invariant-console-artifacts.png](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-artifacts.png)
+- [invariant-console-run-case.png](assets/invariant-console-run-case.png)
+- [invariant-console-run-benchmark.png](assets/invariant-console-run-benchmark.png)
+- [invariant-console-custom-test.png](assets/invariant-console-custom-test.png)
+- [invariant-console-artifacts.png](assets/invariant-console-artifacts.png)
 
 ### C. Installation and setup
 
@@ -318,8 +318,8 @@ Current captured UI assets for public packaging:
 - [ ] define how future roadmap items are tracked publicly
 
 Current release-hygiene assets:
-- [CHANGELOG.md](/Users/jeffreysinason/Development/Invariant/CHANGELOG.md)
-- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
+- [CHANGELOG.md](../CHANGELOG.md)
+- [support_and_limitations.md](support_and_limitations.md)
 
 ### I. EchoForgeX linkage
 
@@ -421,12 +421,12 @@ The most likely blockers for broad public release are:
 
 ## Related Documents
 
-- [README.md](/Users/jeffreysinason/Development/Invariant/README.md)
-- [CONTRIBUTING.md](/Users/jeffreysinason/Development/Invariant/CONTRIBUTING.md)
-- [SECURITY.md](/Users/jeffreysinason/Development/Invariant/SECURITY.md)
-- [current_release_hardening_pass.md](/Users/jeffreysinason/Development/Invariant/docs/current_release_hardening_pass.md)
-- [provider_expansion_feasibility.md](/Users/jeffreysinason/Development/Invariant/docs/provider_expansion_feasibility.md)
-- [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
-- [phased_build_plan.md](/Users/jeffreysinason/Development/Invariant/docs/phased_build_plan.md)
-- [ui_roadmap.md](/Users/jeffreysinason/Development/Invariant/docs/ui_roadmap.md)
-- [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
+- [README.md](../README.md)
+- [CONTRIBUTING.md](../CONTRIBUTING.md)
+- [SECURITY.md](../SECURITY.md)
+- [current_release_hardening_pass.md](current_release_hardening_pass.md)
+- [provider_expansion_feasibility.md](provider_expansion_feasibility.md)
+- [frontend_architecture.md](frontend_architecture.md)
+- [phased_build_plan.md](phased_build_plan.md)
+- [ui_roadmap.md](ui_roadmap.md)
+- [custom_injection_testing_user_manual.md](custom_injection_testing_user_manual.md)

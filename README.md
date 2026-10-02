@@ -91,8 +91,8 @@ Invariant provides the architecture to enforce these rules.
 This repository is licensed under the Apache License 2.0.
 
 See:
-- [LICENSE](/Users/jeffreysinason/Development/Invariant/LICENSE)
-- [CHANGELOG.md](/Users/jeffreysinason/Development/Invariant/CHANGELOG.md)
+- [LICENSE](LICENSE)
+- [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -105,11 +105,11 @@ openly while supporting the larger EchoForgeX injection prevention framework
 direction.
 
 For a short explanation of the OSS, IP, and branding posture, see:
-- [oss_ip_and_branding.md](/Users/jeffreysinason/Development/Invariant/docs/oss_ip_and_branding.md)
+- [oss_ip_and_branding.md](docs/oss_ip_and_branding.md)
 
 For repository governance and reporting, see:
-- [CONTRIBUTING.md](/Users/jeffreysinason/Development/Invariant/CONTRIBUTING.md)
-- [SECURITY.md](/Users/jeffreysinason/Development/Invariant/SECURITY.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [SECURITY.md](SECURITY.md)
 
 Current release posture:
 - `0.1.0-alpha`
@@ -120,7 +120,7 @@ Current release posture:
 ## Quickstart
 
 Start here:
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
+- [quickstart.md](docs/quickstart.md)
 
 Short version:
 
@@ -148,7 +148,7 @@ For a first end-to-end run without API keys:
 - run `safe_baseline` from `Run Case`
 
 For release boundaries and support expectations, see:
-- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
+- [support_and_limitations.md](docs/support_and_limitations.md)
 
 ---
 
@@ -156,19 +156,19 @@ For release boundaries and support expectations, see:
 
 Run case workflow:
 
-![Invariant Run Case](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-case.png)
+![Invariant Run Case](docs/assets/invariant-console-run-case.png)
 
 Run benchmark workflow:
 
-![Invariant Run Benchmark](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-run-benchmark.png)
+![Invariant Run Benchmark](docs/assets/invariant-console-run-benchmark.png)
 
 Custom injection testing workflow:
 
-![Invariant Custom Test](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-custom-test.png)
+![Invariant Custom Test](docs/assets/invariant-console-custom-test.png)
 
 Artifact comparison workflow:
 
-![Invariant Artifacts](/Users/jeffreysinason/Development/Invariant/docs/assets/invariant-console-artifacts.png)
+![Invariant Artifacts](docs/assets/invariant-console-artifacts.png)
 
 ---
 
@@ -234,7 +234,7 @@ The live matrix script will:
 - run core and extended cases against OpenAI when `OPENAI_API_KEY` is available
 - run core and extended cases against Anthropic when `ANTHROPIC_API_KEY` is available
 - run core and extended cases against Mistral when `MISTRAL_API_KEY` is available
-- save benchmark artifacts in [harness/results](/Users/jeffreysinason/Development/Invariant/harness/results)
+- save benchmark artifacts in [harness/results](harness/results)
 
 The API currently exposes:
 - `GET /health`
@@ -248,9 +248,9 @@ The API currently exposes:
 - `GET /benchmarks`
 - `GET /benchmarks/{artifact_name}`
 
-The Phase 2 front-end lives in [frontend](/Users/jeffreysinason/Development/Invariant/frontend) and uses:
+The Phase 2 front-end lives in [frontend](frontend) and uses:
 - React + TypeScript + Vite
-- the FastAPI backend in [api.py](/Users/jeffreysinason/Development/Invariant/harness/src/invariant_harness/api.py)
+- the FastAPI backend in [api.py](harness/src/invariant_harness/api.py)
 
 Start the full local Phase 2 stack in two terminals:
 
@@ -309,13 +309,13 @@ Current retrieval benchmark labels:
 - `safe_other`
 
 For setup and workflow details, see:
-- [quickstart.md](/Users/jeffreysinason/Development/Invariant/docs/quickstart.md)
-- [live_testing_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/live_testing_workflow.md)
-- [benchmark_execution_workflow.md](/Users/jeffreysinason/Development/Invariant/docs/benchmark_execution_workflow.md)
-- [frontend_architecture.md](/Users/jeffreysinason/Development/Invariant/docs/frontend_architecture.md)
-- [custom_injection_testing_user_manual.md](/Users/jeffreysinason/Development/Invariant/docs/custom_injection_testing_user_manual.md)
-- [support_and_limitations.md](/Users/jeffreysinason/Development/Invariant/docs/support_and_limitations.md)
-- [public_release_readiness.md](/Users/jeffreysinason/Development/Invariant/docs/public_release_readiness.md)
+- [quickstart.md](docs/quickstart.md)
+- [live_testing_workflow.md](docs/live_testing_workflow.md)
+- [benchmark_execution_workflow.md](docs/benchmark_execution_workflow.md)
+- [frontend_architecture.md](docs/frontend_architecture.md)
+- [custom_injection_testing_user_manual.md](docs/custom_injection_testing_user_manual.md)
+- [support_and_limitations.md](docs/support_and_limitations.md)
+- [public_release_readiness.md](docs/public_release_readiness.md)
 
 ---
 

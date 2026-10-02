@@ -112,7 +112,7 @@ comparability and project-controlled evaluation behavior over time.
 Do not open a public issue for a sensitive security disclosure.
 
 See:
-- [SECURITY.md](/Users/jeffreysinason/Development/Invariant/SECURITY.md)
+- [SECURITY.md](SECURITY.md)
 
 ## License
 
